@@ -1,56 +1,84 @@
-# Welcome to your Expo app 👋
+# DriveDesk OS 🚗💨
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+> A premium, mobile-first Fleet Management & Rental Operations Platform built for modern car rental businesses. 
 
-## Get started
+DriveDesk OS is a comprehensive, production-ready React Native application designed for owner-operators and booking agents to manage their fleet, track real-time analytics, and process vehicle checkouts smoothly through an interactive step-by-step wizard.
 
-1. Install dependencies
+---
 
-   ```bash
-   npm install
-   ```
+## 📱 Visual Walkthrough & Features
 
-2. Start the app
+*Note: You can view screenshots of the app screens in action below. (To update the screenshots, drop your PNG images named `01_login.png` to `10_analytics.png` into the `assets/screenshots/` folder).*
 
-   ```bash
-   npx expo start
-   ```
+### 📊 Core Management & Analytics
+Showcasing the login screen, clean dashboard metrics, real-time vehicle lists, and custom-drawn reports.
 
-In the output, you'll find options to open the app in a
+| 1. Login Screen | 2. Owner Dashboard | 3. Fleet Directory |
+| :---: | :---: | :---: |
+| ![Login](./assets/screenshots/01_login.png) | ![Dashboard](./assets/screenshots/02_dashboard.png) | ![Fleet](./assets/screenshots/03_fleet.png) |
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### ⚡ 5-Step Booking & Checkout Operations Wizard
+The core operational workflow, walking users through vehicle selection, document uploads, physical inspections, agreement signing, and payment processing.
 
-## Get a fresh project
+| Step 1: Customer & Vehicle | Step 2: Document Verification | Step 3: Vehicle Inspection Grid |
+| :---: | :---: | :---: |
+| ![Step 1](./assets/screenshots/04_booking_step1.png) | ![Step 2](./assets/screenshots/05_booking_step2.png) | ![Step 3](./assets/screenshots/06_booking_step3.png) |
 
-When you're ready, run:
+| Step 4: Digital Agreement | Step 5: Billing & Payments |
+| :---: | :---: |
+| ![Step 4](./assets/screenshots/07_booking_step4.png) | ![Step 5](./assets/screenshots/08_booking_step5.png) |
 
+---
+
+### 📋 Bookings Log & Reports Graph
+
+| 9. Bookings Log List | 10. Analytics & Revenue Trend Graph |
+| :---: | :---: |
+| ![Bookings](./assets/screenshots/09_bookings_log.png) | ![Reports](./assets/screenshots/10_analytics.png) |
+
+---
+
+## 🛠️ Technical Stack & Architecture
+
+*   **Framework:** [Expo](https://expo.dev) (React Native managed workflow) with **Expo Router** (File-based routing).
+*   **Language:** TypeScript (Strict type safety across store databases, UI states, and navigation params).
+*   **State Management:** [Zustand](https://github.com/pmndrs/zustand) (A lightweight reactive state store maintaining vehicle statuses, bookings, customer document states, and business metrics).
+*   **Styling & Theme:** **NativeWind** (TailwindCSS integration for React Native) to achieve glassmorphism, modern dark slate typography, and consistent spacing tokens.
+*   **Vector Graphics:** **React Native SVG** for rendering premium data visualization charts, dashboard graphs, and custom-designed vectors.
+*   **Icons:** Expo Vector Icons (Feather package).
+
+---
+
+## ⚙️ How to Start the App Locally
+
+### 1. Prerequisites
+Ensure you have Node.js and the Android/iOS development environments configured.
+
+### 2. Install Dependencies
+Navigate to the root directory and run:
 ```bash
-npm run reset-project
+npm install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### 3. Start the Development Server
+Launch the Expo CLI packager:
+```bash
+npx expo start
+```
 
-### Other setup steps
+*   **Expo Go:** Scan the QR code displayed in the terminal using your phone's camera (iOS) or the Expo Go App (Android). Make sure both devices are on the same Wi-Fi network.
+*   **USB Physical Device Debugging:** To compile and run directly on a physical phone connected over USB, ensure USB Debugging is turned on in Developer Options, and run:
+    ```bash
+    npx expo run:android
+    ```
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+### 4. Build Standalone Release APK
+To compile a native release APK locally:
+```bash
+cd android
+.\gradlew assembleRelease
+```
+The output file will be located at:
+`android/app/build/outputs/apk/release/app-release.apk`
