@@ -1,4 +1,4 @@
-# DriveDesk OS 🚗💨
+# DriveDesk OS
 
 > A premium, mobile-first Fleet Management & Rental Operations Platform built for modern car rental businesses. 
 
@@ -6,41 +6,41 @@ DriveDesk OS is a comprehensive, production-ready React Native application desig
 
 ---
 
-## 📱 Visual Walkthrough & Features
+## Visual Walkthrough & Features
 
-*Note: You can view screenshots of the app screens in action below. (To update the screenshots, drop your PNG images named `01_login.png` to `10_analytics.png` into the `assets/screenshots/` folder).*
+*Note: You can view screenshots of the app screens in action below. (To update the screenshots, drop your PNG images named `01_login.png` to `11_analytics.png` into the `drivedesk-app/assets/screenshots/` folder).*
 
-### 📊 Core Management & Analytics
-Showcasing the login screen, clean dashboard metrics, real-time vehicle lists, and custom-drawn reports.
+### Core Management & Analytics
+Showcasing the login screen, clean dashboard metrics, and real-time vehicle lists.
 
-| 1. Login Screen | 2. Owner Dashboard | 3. Fleet Directory |
+| Login Screen | Owner Dashboard | Fleet Directory |
 | :---: | :---: | :---: |
-| ![Login](./assets/screenshots/01_login.png) | ![Dashboard](./assets/screenshots/02_dashboard.png) | ![Fleet](./assets/screenshots/03_fleet.png) |
+| ![Login](./drivedesk-app/assets/screenshots/01_login.png) | ![Dashboard](./drivedesk-app/assets/screenshots/02_dashboard.png) | ![Fleet](./drivedesk-app/assets/screenshots/03_fleet.png) |
 
 ---
 
-### ⚡ 5-Step Booking & Checkout Operations Wizard
-The core operational workflow, walking users through vehicle selection, document uploads, physical inspections, agreement signing, and payment processing.
+### Step-by-Step Booking & Checkout Operations Flow
+The core operational workflow, walking users through viewing specifications, vehicle selection, document uploads, physical inspections, agreement signing, and payment processing.
 
-| Step 1: Customer & Vehicle | Step 2: Document Verification | Step 3: Vehicle Inspection Grid |
+| Vehicle Specifications | Step 1: Customer Selection | Step 2: Verify Credentials |
 | :---: | :---: | :---: |
-| ![Step 1](./assets/screenshots/04_booking_step1.png) | ![Step 2](./assets/screenshots/05_booking_step2.png) | ![Step 3](./assets/screenshots/06_booking_step3.png) |
+| ![Vehicle Specs](./drivedesk-app/assets/screenshots/04_vehicle_detail.png) | ![Step 1](./drivedesk-app/assets/screenshots/05_booking_step1.png) | ![Step 2](./drivedesk-app/assets/screenshots/06_booking_step2.png) |
 
-| Step 4: Digital Agreement | Step 5: Billing & Payments |
-| :---: | :---: |
-| ![Step 4](./assets/screenshots/07_booking_step4.png) | ![Step 5](./assets/screenshots/08_booking_step5.png) |
-
----
-
-### 📋 Bookings Log & Reports Graph
-
-| 9. Bookings Log List | 10. Analytics & Revenue Trend Graph |
-| :---: | :---: |
-| ![Bookings](./assets/screenshots/09_bookings_log.png) | ![Reports](./assets/screenshots/10_analytics.png) |
+| Step 3: Inspection Grid | Step 4: Digital Contract | Step 5: Process Payment |
+| :---: | :---: | :---: |
+| ![Step 3](./drivedesk-app/assets/screenshots/07_booking_step3.png) | ![Step 4](./drivedesk-app/assets/screenshots/08_booking_step4.png) | ![Step 5](./drivedesk-app/assets/screenshots/09_booking_step5.png) |
 
 ---
 
-## 🛠️ Technical Stack & Architecture
+### Bookings Log & Reports Graph
+
+| Bookings Log List | Reports & Revenue Trend Graph |
+| :---: | :---: |
+| ![Bookings Log](./drivedesk-app/assets/screenshots/10_bookings_log.png) | ![Reports](./drivedesk-app/assets/screenshots/11_analytics.png) |
+
+---
+
+## Technical Stack & Architecture
 
 *   **Framework:** [Expo](https://expo.dev) (React Native managed workflow) with **Expo Router** (File-based routing).
 *   **Language:** TypeScript (Strict type safety across store databases, UI states, and navigation params).
@@ -51,14 +51,15 @@ The core operational workflow, walking users through vehicle selection, document
 
 ---
 
-## ⚙️ How to Start the App Locally
+## How to Start the App Locally
 
 ### 1. Prerequisites
 Ensure you have Node.js and the Android/iOS development environments configured.
 
 ### 2. Install Dependencies
-Navigate to the root directory and run:
+Navigate to the `drivedesk-app` directory and run:
 ```bash
+cd drivedesk-app
 npm install
 ```
 
@@ -76,9 +77,9 @@ npx expo start
 
 ### 4. Build Standalone Release APK
 To compile a native release APK locally:
-```bash
+```cmd
 cd android
 .\gradlew assembleRelease
 ```
 The output file will be located at:
-`android/app/build/outputs/apk/release/app-release.apk`
+`drivedesk-app/android/app/build/outputs/apk/release/app-release.apk`
