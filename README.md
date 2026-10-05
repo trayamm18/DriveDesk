@@ -75,7 +75,7 @@ npx expo start
     npx expo run:android
     ```
 
-### 4. Build Standalone Release APK
+### 4. Build Release APK
 To compile a native release APK locally:
 ```cmd
 cd android
