@@ -84,4 +84,4 @@ cd android
 The output file will be located at:
 `drivedesk-app/android/app/build/outputs/apk/release/app-release.apk`
 
-end!
+end!!!!
